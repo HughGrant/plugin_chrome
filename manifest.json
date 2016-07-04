@@ -1,0 +1,79 @@
+{
+  "manifest_version": 2,
+
+  "name": "PortiaProject",
+  "description": "A little help on Alibaba.",
+  "version": "0.4",
+
+  "background": {
+    "scripts": ["jquery.js", "urls.js", "background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.alibaba.com/*"],
+      "js": [
+        "jquery.js", "config.js","urls.js", "utils.js", "command_plate.js", "string_score.min.js"
+      ]
+    },
+    {
+      "matches": ["*://hz-productposting.alibaba.com/product/post_product_interface.*"],
+      "js": ["copy_from_product.js"]
+    },
+    {
+      "matches": ["*://hz-productposting.alibaba.com/product/posting.*"],
+      "js": ["display_new_product.js"]
+    },
+    {
+      "matches": ["*://hz-productposting.alibaba.com/product/editing.*"],
+      "js": ["update_product.js"]
+    },
+    {
+      "matches": ["*://hz-mydata.alibaba.com/industry/keywords.*"],
+      "js": ["keyword.js"]
+    },
+    {
+      "matches": ["*://hz-productposting.alibaba.com/product/products_manage.*"],
+      "js": ["product_manage.js"]
+    },
+    {
+      "matches": ["*://*.alibaba.com/product-detail/*"],
+      "js": ["jquery.js", "config.js"]
+    },
+    {
+      "matches": ["*://*.alibaba.com/product/*"],
+      "js": ["jquery.js", "redirect_to_public.js"]
+    },
+    {
+      "matches": [
+        "*://127.0.0.1:*/*",
+        "*://localhost:*/*"
+      ],
+      "js": ["upload_from_back.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "get_login_id.js"
+  ],
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "downloads",
+    "management",
+    "clipboardWrite",
+    "*://*.aliimg.com/*",
+    "*://127.0.0.1:*/*",
+    "*://localhost:*/*",
+    "*://*.alicdn.com/*",
+    "*://112.74.83.16/*",
+    "*://*.bootstrapcdn.com/*"
+  ],
+
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  }
+}

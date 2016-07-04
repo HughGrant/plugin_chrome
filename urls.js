@@ -1,0 +1,12 @@
+var DOMAIN = 'http://localhost:8000/';
+var ADMIN_URL = DOMAIN + 'admin/';
+var LOGIN_URL = DOMAIN + 'chrome_login/';
+var LOGOUT_URL = DOMAIN + 'logout/';
+var KW_URL = DOMAIN + 'products/keyword/';
+var CAPTURE_PRODUCT_URL = DOMAIN + 'products/capture/';
+var UPDATE_BY_MODEL = DOMAIN + 'products/update_by_model';
+var TRACKING_LIST_URL = DOMAIN + 'products/tracking';
+var SEARCH_HOT_KEYWORD_URL = 'http://hz-mydata.alibaba.com/industry/keywords.htm';
+var UPLOAD_PRODUCT_URL = 'http://hz-productposting.alibaba.com/product/posting.htm';
+var MANAGE_PRODUCT_URL = 'http://hz-productposting.alibaba.com/product/products_manage.htm';
+var SEARCH_PRODUCT_URL = 'http://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=';

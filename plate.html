@@ -1,0 +1,48 @@
+<div id="pp_plate">
+	<input id="cmd_field" type="text" placeholder='' size="27">
+	<ul id="cmd_list">
+		<li id="0" cmd="upload product">上传产品<font style="color:grey;"> - Upload Product</font></li>
+		<li id="1" cmd="manage product">管理产品<font style="color:grey;"> - Manage Product</font></li>
+		<li id="2" cmd="search keyword">查关键字<font style="color:grey;"> - Search Keyword</font></li>
+		<li id="3" cmd="capture product">抓取产品<font style="color:grey;"> - Capture Product</font></li>
+		<li id="4" cmd="download images">下载图片<font style="color:grey;"> - Download Images</font></li>
+		<li id="5" cmd="copy product">复制产品<font style="color:grey;"> - Copy Product</font></li>
+		<li id="6" cmd="paste product">粘贴产品<font style="color:grey;"> - Paste Product</font></li>
+	</ul>
+</div>
+
+<style type="text/css">
+	#pp_plate {
+		width: 520px;
+		height: 360px;
+		position: absolute;
+		background-color: white;
+		box-shadow: 2px 2px 5px grey;
+		z-index: 9999999;
+	}
+
+	#cmd_field {
+		border: none;
+		margin-top: 7px;
+		margin-left: 20px;
+		margin-bottom: 5px;
+		font-size: 30px;
+	}
+
+	#cmd_list {
+		height: 311px;
+		overflow
+		overflow-x: hidden;
+		overflow-y: hidden;
+		list-style-type: none;
+		border-top: 1px solid #E8E1E1;
+	}
+
+	#cmd_list > li{
+		font-size: 20px;
+		margin-left: 0px;
+		padding-left: 20px;
+		padding-top: 5px;
+		cursor: pointer;
+	}
+</style>
